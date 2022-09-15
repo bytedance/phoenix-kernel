@@ -1,0 +1,39 @@
+# Added by PICO_Driver sophia.wang for bug60177: change camera csi and mck for ws2 device --start
+ifeq ($(PICOVR_CAM_CSI_WS2_NEW_CONFIG),true)
+export PICO_DTSIFLAGS += -DCAM_CSI_WS2_NEW_CONFIG=1
+else
+export PICO_DTSIFLAGS += -DCAM_CSI_WS2_NEW_CONFIG=0
+endif
+# Added by PICO_Driver sophia.wang for bug60177: change camera csi and mck for ws2 device --end
+
+# Added by Gavin.zhao for task_2155 72/90 switch --begin
+ifeq ($(PICOVR_DISPLAY_FPS_72_90_SWITCH_CONFIG),true)
+export PICO_DTSIFLAGS += -DDISPLAY_FPS_72_90_SWITCH_CONFIG=1
+else
+export PICO_DTSIFLAGS += -DDISPLAY_FPS_72_90_SWITCH_CONFIG=0
+endif
+# Added by Gavin.zhao for task_2155 72/90 switch --end
+
+# Added by PICO_Driver jim.qiu for bug#69094: remove pm8009 for wifi/bt --start--
+ifeq ($(PICOVR_REMOVE_PM8009_CONFIG),true)
+export PICO_DTSIFLAGS += -DPM8009_CONFIG=0
+else
+export PICO_DTSIFLAGS += -DPM8009_CONFIG=1
+endif
+# Added by PICO_Driver jim.qiu for bug#69094: remove pm8009 for wifi/bt --end--
+
+# Added by PICO_Driver haiyun.zhao for task#69242: mipi csi3 share --start--
+ifeq ($(PICOVR_RIGHT_SALVE_CAM_CSI3_SHARE),true)
+export PICO_DTSIFLAGS += -DRIGHT_SALVE_CAM_CSI3_SHARE=1
+else
+export PICO_DTSIFLAGS += -DRIGHT_SALVE_CAM_CSI3_SHARE=0
+endif
+# Added by PICO_Driver haiyun.zhao for task#69242: mipi csi3 share --end--
+
+# Added by PICO_Driver haiyun.zhao for task#69242: imx476 bright up --start--
+ifeq ($(PICOVR_IMX476_CAMERA_SENSOR_CONFIG),true)
+export PICO_DTSIFLAGS += -DIMX476_CAMERA_SENSOR_CONFIG=1
+else
+export PICO_DTSIFLAGS += -DIMX476_CAMERA_SENSOR_CONFIG=0
+endif
+# Added by PICO_Driver haiyun.zhao for task#69242: imx476 bright up --end--

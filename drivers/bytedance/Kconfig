@@ -1,0 +1,6 @@
+config HW_INFO
+	tristate "For vendor hw info"
+	default y
+	---help---
+		This define for vendor hw info
+		default Y.

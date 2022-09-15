@@ -1,0 +1,30 @@
+#
+# AWINIC driver configuration
+#
+
+menu "AWINIC I2C driver"
+
+config FLASHLIGHT_AW36429
+	tristate "Awinic flashlight with driver IC (AW AW36429)"
+	depends on I2C
+	default n
+	help
+		This is for the flashlight driver IC (AW AW36429).
+		Say Y here if you want a flashlight driver IC AW36429.
+		Select this only if your board has this IC.
+		
+		Say M here if you want to compile this driver as a module.
+
+#config SUB_CAMERA_FLASH_EN
+#	tristate "Awinic sub flashlight with driver IC (AW AW36429)"
+#	depends on I2C
+#	default n
+#	help
+#		This is for the flashlight driver IC (AW AW36429).
+#
+#		Say Y here if you want a flashlight driver IC AW36429.
+#		Select this only if your board has this IC.
+#
+#		Say M here if you want to compile this driver as a module.
+
+endmenu
